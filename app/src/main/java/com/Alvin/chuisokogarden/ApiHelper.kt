@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.loopj.android.http.AsyncHttpClient
@@ -54,8 +55,10 @@ class ApiHelper(var context: Context) {
                 response: JSONObject?
             ) {
                 val message = response?.optString("message")
-                if (message == "Login success") {
-                    val user = response.optJSONObject("user")
+                val user = response?.optJSONObject("user")
+
+                if (user!=null) {
+
                     val username = user?.optString("username") ?: ""
                     val email = user?.optString("email") ?: ""
 
@@ -90,7 +93,7 @@ class ApiHelper(var context: Context) {
 
 fun loadProducts(url: String, recyclerView: RecyclerView, progressBar: ProgressBar? = null) {
     progressBar?.visibility = View.VISIBLE
-    val layoutManager = LinearLayoutManager(context)
+    val layoutManager = GridLayoutManager(context,2)
     recyclerView.layoutManager = layoutManager
     val client = AsyncHttpClient(true, 80, 443)
 
@@ -101,9 +104,9 @@ fun loadProducts(url: String, recyclerView: RecyclerView, progressBar: ProgressB
             response: JSONArray
         ) {
             progressBar?.visibility = View.GONE
-            // val productList = ProductAdapter.fromJsonArray(response)
-            // val adapter = ProductAdapter(productList)
-            // recyclerView.adapter = adapter
+             val productList = ProductAdapter.fromJsonArray(response)
+             val adapter = ProductAdapter(productList)
+             recyclerView.adapter = adapter
         }
 
         override fun onFailure(

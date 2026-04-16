@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardBackgroundColor="#BCB5B5"
+    app:cardElevation="15dp"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        >
+<!--        product Name-->
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#000000"
+
+            />
+        <!--        product Photo-->
+        <ImageView
+            android:id="@+id/product_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/veggie" />
+
+        <TextView
+            android:id="@+id/product_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="KES 100"
+            android:textColor="#673AB7"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/product_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="An edible plant or part of a plant, such as the roots, tubers, leaves, stems, flowers, or seeds"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:layout_gravity="start"
+            android:textSize="12sp"
+            android:text="PURCHASE NOW"
+            android:id="@+id/purchase"
+            />
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

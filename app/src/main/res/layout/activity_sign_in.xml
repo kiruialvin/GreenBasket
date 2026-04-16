@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,30 +12,47 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:background="@drawable/shape"
+        android:text="@string/sign_in"
         android:textAlignment="center"
         android:textStyle="bold"
-        android:textSize="30dp"
+        android:fontFamily="cursive"
+        android:layout_marginBottom="24dp"
+        android:padding="10dp"
+        android:textSize="40sp"
         android:layout_margin="10dp"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:textStyle="bold"
-        android:hint="Enter your Username"
         android:layout_margin="20dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext"
+        android:hint="enter_your_email"
+        android:drawableStart="@drawable/email"
+        android:layout_marginBottom="24dp"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:id="@+id/email"
 
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:inputType="textPassword"
+        android:background="@drawable/edittext"
         android:textStyle="bold"
-        android:hint="Enter your Username"
-        android:layout_margin="10dp"
+        android:hint="@string/enter_your_password"
+        android:drawableStart="@drawable/lock"
+        android:layout_marginBottom="24dp"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:id="@+id/password"
+
 
         />
 
@@ -43,11 +61,37 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_margin="20dp"
-        android:text="SIGN IN"
+        android:text="@string/SIGN_IN"
+        android:fontFamily="cursive"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:backgroundTint="@color/black"
+       android:id="@+id/sign"
         />
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_gravity="center"
+       android:layout_marginTop="0dp">
 
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textStyle="bold"
+           android:text="@string/don_t_have_an_account"
+           android:textColor="#FD0404"
+           android:textSize="16sp"
 
+       />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/signIn_link"
+           android:text="@string/sign_up"
+           android:textSize="16sp"
+           android:textColor="#4caf50"
+           android:textStyle="bold"/>
+
+   </LinearLayout>
 </LinearLayout>

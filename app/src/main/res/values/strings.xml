@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ChuiSokogarden</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="enter_your_username">Enter your Username</string>
+    <string name="SIGN_IN">SIGN IN</string>
 </resources>
