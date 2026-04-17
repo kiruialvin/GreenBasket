@@ -49,5 +49,24 @@ class MainActivity : AppCompatActivity() {
         val helper= ApiHelper(applicationContext)
         helper.loadProducts(api,recyclerView,progressbar)
 
+
+
+
+        val about=findViewById<Button>(R.id.about)
+//        click listener
+        about.setOnClickListener {
+            val aboutIntent= Intent(applicationContext, About::class.java)
+            startActivity(aboutIntent)
+
+        }
+        val speechToTextactivity=findViewById<Button>(R.id.speechButton)
+//        click listener
+        speechToTextactivity.setOnClickListener {
+            val speechToTextactivityIntent= Intent(applicationContext, Speech_To_TextActivity::class.java)
+            startActivity(speechToTextactivityIntent)
+
+        }
+
     }
+
 }

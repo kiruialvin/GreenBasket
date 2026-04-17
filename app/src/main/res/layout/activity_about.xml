@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Info"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:background="@drawable/shape"
+        android:layout_marginTop="12dp"
+
+        />
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to our eCommerce app, a simple and use-friedly platform designed to make online shopping easy and accessible to everyone. Users can quikly sign up to create account,securely sign in and browse a wide range of products with detail description and images. our seamless checkout process allows customers to pay conveniently through M-pesa"
+        android:textAlignment="gravity"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type somthing to speak "
+        android:background="@drawable/edittext"
+        android:layout_marginTop="16dp"
+        android:paddingStart="12dp"
+        android:inputType="text"
+        android:paddingEnd="12dp"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp"
+        android:id="@+id/inputText"
+
+
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        android:layout_gravity="start"
+        android:textSize="16dp"
+        android:text="Listen"
+        android:id="@+id/speakButton"
+        />
+
+</LinearLayout>
